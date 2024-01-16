@@ -17,6 +17,7 @@ def greet_someone():
         greet_someone()
         dont_print = True
 
+    # This check prevents repeating an empty print
     if not dont_print:
         print("Have a great day {}!".format(input_name))
 
