@@ -1,13 +1,14 @@
 import random
 
-# Define the codes
-three_numbers = ""
-four_numbers = ""
-# Loop x times to create a code
-for i in range(3):
-    three_numbers += str(random.randint(0, 9))
-for i in range(4):
-    four_numbers += str(random.randint(1, 6))
+# This function generates a code with a set length
+# It also accepts the set values as a tuple
+def generateCode(length, vals):
+    code = ""
+    for i in range(length):
+        code += str(random.randint(vals[0], vals[1]))
+    return code
+
+
 # Print result
-print(f"Three number code: {three_numbers}")
-print(f"Four number code: {four_numbers}")
+print(f"Three number code: {generateCode(3, (0, 9))}")
+print(f"Four number code: {generateCode(4, (1, 6))}")
