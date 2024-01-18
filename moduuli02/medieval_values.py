@@ -9,6 +9,6 @@ grams += luodit * luoti_weight
 
 kilograms = int(grams / 1000)
 grams = grams - (kilograms * 1000)
-grams = '{0:.2f}'.format(grams)
+grams = '{:.2f}'.format(grams)
 
-print(f"Massa nykyisissä mitoissa: {kilograms}kg {grams} grammaa")
+print(f"Massa nykyisissä mitoissa: {kilograms}kg. {grams}g.")
