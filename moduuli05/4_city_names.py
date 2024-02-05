@@ -1,6 +1,6 @@
 cities = []
 
-for i in range(0, 5):
+for i in range(5):
     cities.append(input("Anna kaupungin nimi: "))
 
 for city in cities:
