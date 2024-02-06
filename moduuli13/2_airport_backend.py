@@ -15,9 +15,10 @@ app = Flask(__name__)
 def get_airport(code):
     operator.execute(
         f"SELECT ident as ICAO, name as Name, municipality as Municipality FROM airport WHERE ident = '{code}'")
-    port_data = operator.fetchall()
+    # Since we can't get more than one result, fetchone is perfect for our needs.
+    port_data = operator.fetchone()
     # It's not yet JSON, but can be converted from dict to JSON pretty easily.
-    return port_data[0]
+    return port_data
 
 
 @app.route("/airport/<icao>", methods=["GET"])
